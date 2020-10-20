@@ -1,41 +1,44 @@
 package com.bridgelabz;
-
-
-
-import java.util.Scanner;
-
-public class EmployeeStart {
-
-	
-			public static void main(String[] args) {
-				// TODO Auto-generated method stub
+public class EmployeeStart 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("******Welocme to Employee Wages Problem*******");
+		
+		int Is_Present=1;
+		int Salary=0;
+		int Is_Part_Time=0;
+		int Is_Full_Time=1;
+		int EmpRate_Hour=20;
+		int EmpHrs=8;
+		int Part_Time_Hr=4;
+		
+//Genrating Random Number
+		int EmpCheck = (int) (Math.floor(Math.random() *10 % 2));
+		int EmpCheck1 = (int) (Math.floor(Math.random() *10 % 2));
+//Checking Employee And Caluclating Wages
+		if (EmpCheck == Is_Present)
+		{
+			if (EmpCheck1 == Is_Full_Time)
+			{
+				Salary=EmpHrs*EmpRate_Hour;
+				System.out.println("Employee Is Present and Salary is: " +Salary);
 				
-					System.out.println("welcome to employee wages");
-					
-				int IS_FULL_TIME = 1;
-				int WAGE_PER_HOUR=20;
-				int DAILY_EMPLOY_WAGES=0;
-				int i;
-				int num=0;
-				Scanner sc= new Scanner(System.in);
-				System.out.printf("enter the number");
-				DAILY_EMPLOY_WAGES=sc.nextInt();
-				for(i=0;i<=num;i++)
-				{
-				double empCheck = (Math.floor(Math.random() *10)%2);
-				System.out.println(empCheck);
-				if (empCheck == IS_FULL_TIME) {
-					
-					DAILY_EMPLOY_WAGES=WAGE_PER_HOUR*8; 
-					System.out.println(DAILY_EMPLOY_WAGES);
-				System.out.printf("employees daily wages: "+DAILY_EMPLOY_WAGES);
-
 			}
-				else
-				{
-					System.out.println("EMPLOYEE not  PRESENT");
-				}
+							
+			else
+			{
+				Is_Part_Time=EmpRate_Hour*Part_Time_Hr;
+				System.out.println("Employee Is Present and Salary is: " +Is_Part_Time);
+					
+			} //Else Block Over
+		
+		}
+		else
+		{
+			System.out.println("Employee Is Absent & Salary is :" +Salary);
+		}
 
-		}
-				}
-		}
+	} //Public ends
+
+}// MAin Class ends
