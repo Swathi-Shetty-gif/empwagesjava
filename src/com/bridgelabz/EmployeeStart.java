@@ -1,43 +1,23 @@
 package com.bridgelabz;
-public class EmployeeStart 
-
-
-
-{
-	public static void main(String[] args) 
-	{
-		System.out.println("Welocme to Employee Wages Problem");
-		
-		
-		int Salary=0;
-		int Is_Part_Time=0;
-		int Is_Full_Time=1;
-		int EmpRate_Hour=20;
-		int EmpHrs=8;
-		int Part_Time_Hr=4;
-		
-//Genrating Random Number
-		int EmpCheck = (int) (Math.floor(Math.random() *10 % 3));
-//Checking Employee And Caluclating Wages Using Case
-		
-		switch(EmpCheck)
-		{
-			case 1:
-				Salary=EmpHrs*EmpRate_Hour;
-				System.out.println("Employee Is Present and Salary is: " +Salary);
-			break;
-			
-			case 2:
-				Is_Part_Time=EmpRate_Hour*Part_Time_Hr;
-				System.out.println("Employee Is Present and Salary is: " +Is_Part_Time);
-			break;
-			
-			default:
-				System.out.println("Employee is Absent and Salary is: " +Salary);
-			break;
-			
-		}	//Switch Case
-		
-	} //Public
-
-}// MAin Class
+public class EmployeeStart {
+public static void main(String[] args) {
+	int fullTime=1;
+	int partTime=2;
+	int Wages_Per_Hour=20;
+	int full_Day_Hour=8;
+	int Part_Day_Hour=4;
+	int days=20;
+	int checkout=(int) (Math.floor(Math.random() *10) %3);
+	System.out.println(checkout);
+	switch(checkout){
+		case 1 :int total=Wages_Per_Hour * full_Day_Hour;
+							System.out.println(total * days);
+							break;
+		case 2 :int total1=Wages_Per_Hour * Part_Day_Hour;
+							System.out.println(total1 * days);
+							break;
+		default : System.out.println("0");
+	}
+						
+	}
+	}
